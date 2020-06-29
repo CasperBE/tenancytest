@@ -4,4 +4,10 @@ Set up testing for spatie/laravel-multitenancy
 
 ## Steps
 
+#### Initial commit
 - `laravel new tenancytest`
+
+#### Install spatie/laravel-multitenancy
+- `composer require "spatie/laravel-multitenancy:^1.0"`
+- `php artisan vendor:publish --provider="Spatie\Multitenancy\MultitenancyServiceProvider" --tag="config"`
+
