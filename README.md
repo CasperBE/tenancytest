@@ -18,3 +18,10 @@ Set up testing for spatie/laravel-multitenancy
 - create "mt_landlord" database
 - `php artisan vendor:publish --provider="Spatie\Multitenancy\MultitenancyServiceProvider" --tag="migrations"`
 - `php artisan migrate --path=database/migrations/landlord --database=landlord`
+
+#### Add testing
+- Create "mt_test_one" and "mt_test_two" databases
+- Add TenantFactory
+- `php artisan make:test TenancyTest --unit`
+- Add some methods to TestCase
+- Add Unit/TenancyTest with some tests
