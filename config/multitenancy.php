@@ -14,7 +14,7 @@ return [
      * This class should extend `Spatie\Multitenancy\TenantFinder\TenantFinder`
      *
      */
-    'tenant_finder' => null,
+    'tenant_finder' => Spatie\Multitenancy\TenantFinder\DomainTenantFinder::class,
 
     /*
      * These fields are used by tenant:artisan command to match one or more tenant
@@ -29,7 +29,7 @@ return [
      * A valid task is any class that implements Spatie\Multitenancy\Tasks\SwitchTenantTask
      */
     'switch_tenant_tasks' => [
-        // add tasks here
+        Spatie\Multitenancy\Tasks\SwitchTenantDatabaseTask::class,
     ],
 
     /*
@@ -51,12 +51,12 @@ return [
      *
      * Set to `null` to use the default connection.
      */
-    'tenant_database_connection_name' => null,
+    'tenant_database_connection_name' => 'tenant',
 
     /*
      * The connection name to reach the landlord database
      */
-    'landlord_database_connection_name' => null,
+    'landlord_database_connection_name' => 'landlord',
 
     /*
      * This key will be used to bind the current tenant in the container.
