@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4155dab3-79fa-4226-b114-aa8b08d64e91" name="Default Changelist" comment="" />
+    <list default="true" id="4155dab3-79fa-4226-b114-aa8b08d64e91" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tenancytest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tenancytest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +17,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -113,9 +121,11 @@
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-multitenancy" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dzagI3tlfwfxodSFzPnX7t5y3H" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -123,17 +133,57 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
+  <component name="RunManager" selected="PHPUnit.TenancyTest.tenancy_is_working">
+    <configuration name="TenancyTest.tenancy_is_working" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Unit\TenancyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TenancyTest.php" method="tenancy_is_working" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="TenancyTest.tenant_is_set" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Unit\TenancyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TenancyTest.php" method="tenant_is_set" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TenancyTest.tenant_is_the_default_database_connection" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Unit\TenancyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TenancyTest.php" method="tenant_is_the_default_database_connection" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.TenancyTest.tenancy_is_working" />
+        <item itemvalue="PHPUnit.TenancyTest.tenant_is_set" />
+        <item itemvalue="PHPUnit.TenancyTest.tenant_is_the_default_database_connection" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -145,11 +195,57 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593430484858</updated>
-      <workItem from="1593430486892" duration="119000" />
+      <workItem from="1593430486892" duration="4347000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="938" y="331" key="#TenancyTest.tenancy_is_working" timestamp="1593434693689">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="938" y="331" key="#TenancyTest.tenancy_is_working/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593434693689" />
+    <state x="938" y="331" key="#TenancyTest.tenant_is_set" timestamp="1593432814031">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="938" y="331" key="#TenancyTest.tenant_is_set/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593432814031" />
+    <state x="938" y="331" key="#TenancyTest.tenant_is_the_default_database_connection" timestamp="1593432728789">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="938" y="331" key="#TenancyTest.tenant_is_the_default_database_connection/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593432728789" />
+    <state x="1068" y="653" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1593433919327">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1068" y="653" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593433919327" />
+    <state x="938" y="381" key="#phpunit.xml" timestamp="1593434672111">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="938" y="381" key="#phpunit.xml/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593434672111" />
+    <state width="2518" height="423" key="GridCell.Tab.0.bottom" timestamp="1593434823053">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593434823053" />
+    <state width="2518" height="423" key="GridCell.Tab.0.center" timestamp="1593434823050">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.center/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593434823050" />
+    <state width="2518" height="423" key="GridCell.Tab.0.left" timestamp="1593434823048">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.left/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593434823048" />
+    <state width="2518" height="423" key="GridCell.Tab.0.right" timestamp="1593434823051">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.right/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593434823051" />
+    <state x="946" y="477" width="667" height="486" key="find.popup" timestamp="1593432050262">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="946" y="477" width="667" height="486" key="find.popup/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593432050262" />
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1593437399505">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440/-1200.0.1200.1920@0.0.2560.1440" timestamp="1593437399505" />
   </component>
 </project>
