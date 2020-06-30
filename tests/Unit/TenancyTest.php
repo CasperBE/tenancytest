@@ -2,8 +2,10 @@
 
 namespace Tests\Unit;
 
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\URL;
+use Spatie\Multitenancy\Models\Tenant;
 use Tests\TestCase;
-use URL;
 
 class TenancyTest extends TestCase
 {
@@ -29,15 +31,23 @@ class TenancyTest extends TestCase
     public function tenancy_is_working()
     {
         $this->freshLandlordDb();
+
         $tenant_one = $this->createTenant('One');
         $this->migrateTenant($tenant_one->id);
 
-        URL::forceRootUrl('https://one.tenancytest.test');
-        $response = $this->get('/');
-        $response->assertStatus(200); // --> Works
+        $currentTenant = Tenant::where('domain', 'one.tenancytest.test')->first();
+        $currentTenant->makeCurrent();
 
-        URL::forceRootUrl('https://doesnotexist.tenancytest.test');
         $response = $this->get('/');
-        $response->assertStatus(500); // --> Fails: Expected status code 500 but received 200.
+        $response->assertStatus(200);
+
+        $currentTenant->forgetCurrent();
+        session()->flush();
+
+        Config::set('app.url', 'https://doesnotexist.tenancytest.test');
+        URL::forceRootUrl('https://doesnotexist.tenancytest.test');
+
+        $response = $this->get('/');
+        $response->assertStatus(500);
     }
 }

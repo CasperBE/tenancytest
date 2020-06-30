@@ -30,6 +30,7 @@ return [
      */
     'switch_tenant_tasks' => [
         Spatie\Multitenancy\Tasks\SwitchTenantDatabaseTask::class,
+        App\Tasks\SwitchRouteUrlTask::class,
     ],
 
     /*
